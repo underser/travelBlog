@@ -1,0 +1,84 @@
+.main-header
+  padding: 10px 15px
+  background-color: $main-green
+  &__wrap
+    max-width: $container-width
+    margin: 0 auto
+  &__top
+    display: flex
+    align-items: center
+  &__middle
+    min-height: 200px
+    display: flex
+    align-items: center
+    @include breakpoint($xs)
+      min-height: 100px
+  &__bottom
+    display: flex
+    align-items: center
+    padding: 20px
+    @include breakpoint($xs)
+      flex-direction: column
+
+.logo
+  &__link
+  &__svg
+
+.connect-action
+  margin-left: auto
+  &__item
+    color: #fff
+    transition: all .5s
+    &:hover
+      text-decoration: underline
+
+.site-name
+  font: 700 70px $base-font
+  @include breakpoint($xs)
+    font-size: 30px
+
+.main-navigation
+  &__wrap
+    display: flex
+    align-items: center
+    @include breakpoint($xs)
+      flex-direction: column
+  &__item
+    padding: 0 15px
+    &:first-child,
+    &:last-child
+      padding: 0
+  &__link
+    position: relative
+    padding-bottom: 5px
+    font: 300 20px $base-font
+    color: #fff
+    &:hover
+      &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        display: inline-block
+        background-color: #fff
+        width: 100%
+        height: 1px
+
+
+.social-links
+  margin-left: auto
+  @include breakpoint($xs)
+    margin: auto
+    padding: 15px 0 0 0
+  &__wrap
+    display: flex
+    align-items: center
+  &__item
+    padding: 0 3px
+    &:last-child
+      padding-right: 0
+  &__link
+    svg
+      width: 35px
+      height: 35px
+      fill: #fff
