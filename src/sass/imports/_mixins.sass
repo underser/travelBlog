@@ -1,0 +1,52 @@
+@mixin container
+  max-width: $container-width
+  min-width: $container-min-width
+  margin: 0 auto
+
+@mixin row($wrap)
+  display: flex
+  @if $wrap != false
+    flex-wrap: wrap
+  @if $gutters != 0
+    margin-left: -$gutters
+    margin-right: -$gutters
+
+@mixin span($i)
+  padding-left: $gutters
+  width: $i * 100% / $columns
+
+@mixin grid
+  .col
+    @for $i from 1 through $columns
+      &-#{$i}
+        box-sizing: border-box
+        @include span($i)
+      &-last
+        margin-left: auto
+    @include breakpoint($md)
+      @for $i from 1 through $columns
+        &-md
+          &-#{$i}
+            @include span($i)
+          &-last
+            margin-left: auto
+        @include breakpoint($md)
+      @for $i from 1 through $columns
+        &-xs
+          &-#{$i}
+            @include span($i)
+          &-last
+            margin-left: auto
+          @include breakpoint($md)
+      @for $i from 1 through $columns
+        &-xxs
+          &-#{$i}
+            @include span($i)
+          &-last
+            margin-left: auto
+
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both

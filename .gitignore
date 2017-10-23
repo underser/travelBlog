@@ -146,4 +146,7 @@ vendor/
 
 .idea/
 
+# Preprocessed styles
+public/css/
+
 # End of https://www.gitignore.io/api/node,linux,phpstorm

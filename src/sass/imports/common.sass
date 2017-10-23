@@ -1,3 +1,9 @@
 body
   font: $base-font-weight $base-font-size $base-font
   color: #fff
+  @include breakpoint($md)
+    font-size: $base-font-size - 1px
+  @include breakpoint($xs)
+    font-size: $base-font-size - 2px
+  @include breakpoint($xxs)
+    font-size: $base-font-size - 3px

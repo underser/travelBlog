@@ -1,2 +1,29 @@
 {% extends "layouts/layout.twig" %}
 
+{% block body %}
+    {% block posts %}
+
+        {# Main big post #}
+        <div class="main-big-post" style="background-image: url('img/test-big-img.jpg')">
+            <div class="main-big-post__wrap">
+                <h2 class="main-big-post__title">
+                    <a href="#" class="main-big-post__link">7 причин подорожувати молодим</a>
+                </h2>
+                <p class="main-big-post__subtitle">Чому варто хоча б спробувати подорожі у молодості</p>
+                <div class="author">
+                    <a href="#" class="author__photo">
+                        <img src="img/test-photo.gif" alt="post author photo">
+                    </a>
+                    <a href="#" class="author__name">Roman Sliusar</a>
+                    <br>
+                    <p class="author__pub-date">05 jun 2017</p>
+                </div>
+            </div>
+        </div>
+        {# Main big post end #}
+
+        {# Middle posts grid #}
+        {# Middle posts grid end #}
+    {% endblock %}
+{% endblock %}
+

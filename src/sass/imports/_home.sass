@@ -1,0 +1,50 @@
+$big_post-height: 450px
+
+.main-big-post
+  display: flex
+  justify-content: center
+  min-height: $big_post-height
+  background-size: cover
+  color: #fff
+  @include breakpoint($xs)
+    min-height: $big_post-height - 50px
+  &__wrap
+    width: 100%
+    max-width: $container-width
+    margin: auto 0 0 0
+    padding-bottom: 5%
+    background-size: cover
+    @include breakpoint($md)
+      padding: 0 5%
+  &__title
+    margin: 0
+    padding: 10px 0
+    font: 700 rem(50px) $base-font
+    @include breakpoint($xs)
+      font-size: rem(30px)
+  &__link
+    color: #fff
+    cursor: pointer
+  &__subtitle
+    font: 300 rem(30px) $base-font
+    @include breakpoint($xs)
+      font-size: rem(18px)
+
+.author
+  @include clearfix
+  padding: 15px 0
+  user-select: none
+  &__photo
+    float: left
+    padding: 5px 5px 0 0
+    overflow: hidden
+    vertical-align: middle
+    img
+      border-radius: 50%
+      width: 36px
+      height: 36px
+  &__name
+    color: #fff
+    cursor: pointer
+  &__pub-date
+    display: inline-block
