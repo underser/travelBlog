@@ -1,0 +1,13 @@
+{% extends "layouts/layout.twig" %}
+
+{% block body %}
+<div class="wrong-route">
+    <div class="wrong-route__wrap container container--narrow">
+        <h1 class="wrong-route__title">{{ message.title }}</h1>
+        <p class="wrong-route__message">{{ message.message_text }}</p>
+        {% if (message.image) %}
+            <img src="{{ message.image.url }}" alt="{{ message.image.alt }}">
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -23,7 +23,85 @@
         {# Main big post end #}
 
         {# Middle posts grid #}
+        <div class="container">
+            <div class="row">
+                {% for i in range(0, 3) %}
+                <div class="col-6 col-xxs-12">
+                    <div class="post-preview">
+                        <a href="" class="post-preview__link">
+                            <img src="img/test-post-middle.jpeg" class="post-preview__img" alt="">
+                        </a>
+                        <a href="#" class="post-preview__link">
+                            <h3 class="post-preview__title">Some title of middle post</h3>
+                        </a>
+                        <p class="post-preview__subtitle">hop, it's subtitle of middle post, and it can be more longer than it's title, that written above</p>
+                        <div class="author">
+                            <a href="#" class="author__photo">
+                                <img src="img/test-photo.gif" alt="post author photo">
+                            </a>
+                            <a href="#" class="author__name author__name--dark">Roman Sliusar</a>
+                            <br>
+                            <p class="author__pub-date author__pub-date--dark">05 jun 2017</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         {# Middle posts grid end #}
+
+        {# Smal posts grid #}
+        <div class="container">
+            <div class="row">
+                {% for i in range(0, 2) %}
+                    <div class="col-4 col-xxs-12">
+                        <div class="post-preview">
+                            <a href="" class="post-preview__link">
+                                <img src="img/test-post-middle.jpeg" class="post-preview__img" alt="">
+                            </a>
+                            <a href="#" class="post-preview__link">
+                                <h3 class="post-preview__title">Some title of middle post</h3>
+                            </a>
+                            <p class="post-preview__subtitle">hop, it's subtitle of middle post, and it can be more longer than it's title, that written above</p>
+                            <div class="author">
+                                <a href="#" class="author__photo">
+                                    <img src="img/test-photo.gif" alt="post author photo">
+                                </a>
+                                <a href="#" class="author__name author__name--dark">Roman Sliusar</a>
+                                <br>
+                                <p class="author__pub-date author__pub-date--dark">05 jun 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {# Smal posts grid end #}
+
+        {# Big content grid #}
+        <div class="container container--narrow">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-big-post" style="background-image: url('img/test-big-img.jpg')">
+                        <div class="main-big-post__wrap">
+                            <h2 class="main-big-post__title">
+                                <a href="#" class="main-big-post__link">7 причин подорожувати молодим</a>
+                            </h2>
+                            <p class="main-big-post__subtitle">Чому варто хоча б спробувати подорожі у молодості</p>
+                            <div class="author">
+                                <a href="#" class="author__photo">
+                                    <img src="img/test-photo.gif" alt="post author photo">
+                                </a>
+                                <a href="#" class="author__name">Roman Sliusar</a>
+                                <br>
+                                <p class="author__pub-date">05 jun 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Big content grid end #}
     {% endblock %}
 {% endblock %}
 

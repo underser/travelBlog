@@ -1,4 +1,5 @@
 @mixin container
+  width: 100%
   max-width: $container-width
   min-width: $container-min-width
   margin: 0 auto
@@ -12,7 +13,8 @@
     margin-right: -$gutters
 
 @mixin span($i)
-  padding-left: $gutters
+  @if $i != $columns
+    padding-left: $gutters
   width: $i * 100% / $columns
 
 @mixin grid

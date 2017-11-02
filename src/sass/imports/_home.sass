@@ -2,6 +2,7 @@ $big_post-height: 450px
 
 .main-big-post
   display: flex
+  width: 100%
   justify-content: center
   min-height: $big_post-height
   background-size: cover
@@ -46,5 +47,26 @@ $big_post-height: 450px
   &__name
     color: #fff
     cursor: pointer
+    &--dark
+      color: $base
   &__pub-date
     display: inline-block
+    &--dark
+      color: $base
+
+.post-preview
+  box-sizing: border-box
+  padding: 20px 5% 10px 5%
+  &__link
+    display: inline-block
+    margin: 0 0 10px 0
+  &__img
+    vertical-align: middle
+  &__title
+    font: 400 25px $base-font
+    color: $dark-light
+    &:hover
+      color: $base
+  &__subtitle
+    font: 300 $base-font-size $base-font
+    color: $dark-light

@@ -10,6 +10,7 @@ $base-font-weight: 300
 //-------*/
 $base: #000
 $main-green: #009700
+$dark-light: #2f2f2f
 
 
 ///*-----
@@ -19,6 +20,7 @@ $columns: 12
 $gutters: 2%
 $container-width: 960px
 $container-min-width: 320px
+$container-width--narrow: 1230px // Looks good on ubuntu with side bar
 
 $show-grid: hide
 
@@ -30,8 +32,8 @@ $lg: min-width 1200px // Large
 
 
 @function rem($size)
-	$remSize: $size / $base-font-size
-	@return #{$remSize}rem
+    $remSize: $size / $base-font-size
+    @return #{$remSize}rem
 
 @function to-bool($value)
-	@return not ($value or $value == "" or $value == 0 or $value == ())
+    @return not ($value or $value == "" or $value == 0 or $value == ())
